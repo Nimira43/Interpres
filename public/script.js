@@ -5,7 +5,9 @@ const textInput = document.querySelector('textarea')
 let voices = []
 
 function loadVoices() {
-  
+  voices = speechSynthesis.getVoices()
+  voiceSelect.innerHTML = voices
+    .map((voice, index) => ``)
 }
 
 playButton.addEventListener('click', () => {
