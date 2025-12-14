@@ -7,7 +7,9 @@ let voices = []
 function loadVoices() {
   voices = speechSynthesis.getVoices()
   voiceSelect.innerHTML = voices
-    .map((voice, index) => ``)
+    .map((voice, index) =>
+      `<option value="${index}">${voice.name} (${voice.lang})</option>`
+    )
 }
 
 playButton.addEventListener('click', () => {
