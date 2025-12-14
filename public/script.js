@@ -13,7 +13,11 @@ function loadVoices() {
   .join('')
 }
 
+speechSynthesis.onvoiceschanged = loadVoices
+loadVoices()
+
 playButton.addEventListener('click', () => {
   const utterance = new SpeechSynthesisUtterance(textInput.value)
+  const selectedVoice = voices[voiceSelect]
   speechSynthesis.speak(utterance)
 })
