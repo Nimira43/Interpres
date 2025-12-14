@@ -1,6 +1,6 @@
 const voiceSelect = document.querySelector('#voiceSelect')
 const playButton = document.querySelector('#playButton')
-const textInput = document.querySelector('textare')
+const textInput = document.querySelector('textarea')
 
 playButton.addEventListener('click', () => {
   const utterance = new SpeechSynthesisUtterance(textInput.value)
