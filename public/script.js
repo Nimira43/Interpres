@@ -9,7 +9,8 @@ function loadVoices() {
   voiceSelect.innerHTML = voices
     .map((voice, index) =>
       `<option value="${index}">${voice.name} (${voice.lang})</option>`
-    )
+  )
+  .join('')
 }
 
 playButton.addEventListener('click', () => {
