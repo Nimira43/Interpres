@@ -8,40 +8,40 @@
   <link rel="stylesheet" href="styles.css">
   <title>Interpres</title>
 </head>
-<body class="bg-sky-200 flex items-center justify-center h-screen">
+<body class="bg-sky-100 flex items-center justify-center h-screen">
   
-  <div class="bg-white text-gray-600 shadow-md rounded-md p-6 max-w-md w-full">
+  <div class="bg-white text-gray-600 shadow-xl rounded-md p-6 max-w-md w-full">
     
-    <h1 class="logo text-2xl font-medium text-sky-900 text-center mb-4">Interpres</h1>
+    <h1 class="logo text-2xl font-medium text-sky-700 text-center mb-4">Interpres</h1>
     
     <textarea
-      class="w-full h-32 p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-400 resize-none"
+      class="w-full h-32 p-3 border border-gray-400 rounded-md outline-none focus:border-sky-700 transitioning resize-none"
       placeholder="Enter text..."
     ></textarea>
 
     <div class="mt-4">
       <label 
         for="languageSelect" 
-        class="block text-sm font-medium text-sky-900 mb-2"
+        class="block text-sm font-bold text-sky-700 mb-2"
       >
         Select Language
       </label>
       <select 
         id="languageSelect"
-        class="w-full p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-400"
+        class="w-full p-3 border border-gray-400 rounded-md outline-none focus:border-sky-700 transitioning"
       ></select>
     </div> 
     
     <div class="mt-4">
       <label
         for="voiceSelect"
-        class="block text-sm font-medium text-sky-900 mb-2"
+        class="block text-sm font-bold text-sky-700 mb-2"
       >
         Select Voice
       </label>
       <select 
         id="voiceSelect"
-        class="w-full p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-400"  
+        class="w-full p-3 border border-gray-400 rounded-md outline-none focus:border-sky-700 transitioning"  
       >
         <option value="default">Default</option>
         <option value="voice1">Voice 1</option>
@@ -51,7 +51,7 @@
   
     <button 
       id="playButton"
-      class="mt-6 w-full bg-transparent text-sky-900 border border-sky-900 font-medium py-3 rounded-md uppercase hover:bg-sky-900 hover:text-white btn-hover"
+      class="mt-6 w-full bg-transparent text-sky-700 border border-sky-700 font-bold py-3 rounded-md uppercase hover:bg-sky-700 hover:text-white transitioning"
     >
       Play
     </button>
