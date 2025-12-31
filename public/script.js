@@ -1,6 +1,7 @@
 import { languages } from './js/languages.js'
 
 const voiceSelect = document.querySelector('#voiceSelect')
+const languageSelect = document.querySelector('#languageSelect')
 const playButton = document.querySelector('#playButton')
 const textInput = document.querySelector('textarea')
 
@@ -8,6 +9,7 @@ languages.forEach(({ code, name }) => {
   const option = document.createElement('option')
   option.value = code
   option.textContent = name
+  languageSelect.appendChild(option)
 })
 
 
