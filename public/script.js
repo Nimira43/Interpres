@@ -12,7 +12,6 @@ languages.forEach(({ code, name }) => {
   languageSelect.appendChild(option)
 })
 
-
 let voices = []
 
 function loadVoices() {
