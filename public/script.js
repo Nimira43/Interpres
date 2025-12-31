@@ -4,7 +4,10 @@ const voiceSelect = document.querySelector('#voiceSelect')
 const playButton = document.querySelector('#playButton')
 const textInput = document.querySelector('textarea')
 
-console.log(languages)
+languages.forEach(({ code, name }) => {
+  
+})
+
 
 let voices = []
 
