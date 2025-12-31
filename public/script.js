@@ -5,7 +5,9 @@ const playButton = document.querySelector('#playButton')
 const textInput = document.querySelector('textarea')
 
 languages.forEach(({ code, name }) => {
-  
+  const option = document.createElement('option')
+  option.value = code
+  option.textContent = name
 })
 
 
