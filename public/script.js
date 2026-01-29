@@ -26,6 +26,31 @@ function loadVoices() {
 speechSynthesis.onvoiceschanged = loadVoices
 loadVoices()
 
+async function translateText(text, targetLang) {
+  try {
+    const response = await fetch('/api/translate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text,
+        target: targetLang
+      })
+    })
+
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${await response.text()}`)
+    }
+    const data = await response.json()
+    return data.data.translations[0].translatedText
+  } catch (error) {
+    console.error('Translation Error: ', error)
+    alert('Failed to translate text.')
+    return text
+  }
+}
+
 playButton.addEventListener('click', () => {
   const utterance = new SpeechSynthesisUtterance(textInput.value)
   const selectedVoice = voices[voiceSelect.value]
